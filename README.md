@@ -2,6 +2,8 @@
 Due: September 19, 11:59pm
 
 Use the following link to to create your private github repository for this assignment: 
+https://classroom.github.com/a/uLcmQLn_
+
 The repository will be seeded with the skeleton code and test cases. To generate JavaDoc documentation, after checking out the starter
 code from github, open it in IntellJ, select Tools from the menu and then "generate JavaDoc". You will be able to specify the output directory.
 Browse documention by opening index.html in the browser.
