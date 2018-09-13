@@ -15,7 +15,7 @@ Fill in code in the following classes in packages arrays and imageManipulation:
 -ImageProcessor (please see ImageProcessor.pdf on Canvas for description of the methods and look at the expected results in folder called expectedResults).
 
 Please read comments above each method. Be careful to use only data structures that are allowed for each problem. For example, for several methods in class
-MyArray, you are NOT allowed to use an extra array or ArrayList etc. Do not modify classes Pixel, Picture and MyArray. Do NOT modify the tests or the starter code except where the comments explicitly tell you to add your own code. Do not change the structure of the project.
+MyArray, you are NOT allowed to use an extra array or ArrayList etc. Do not modify classes Pixel, Picture and MyArrayDriver. Do NOT modify the tests or the starter code except where the comments explicitly tell you to add your own code. Do not change the structure of the project.
 
 MyArrayTester has been provided to you (inside test folder). Please note that you are responsible for performing additional testing - passing tests
 does not guarantee that the code is correct.
