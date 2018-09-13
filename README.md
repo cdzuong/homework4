@@ -12,7 +12,7 @@ In this assingment, you will practice using Java arrays and learn how to manipul
 Fill in code in the following classes in packages arrays and imageManipulation:
 
 -MyArray
--ImageProcessor (please see ImageProcessor.pdf on Canvas for images of expected results).
+-ImageProcessor (please see ImageProcessor.pdf on Canvas for description of the methods and look at the expected results in folder called expectedResults).
 
 Please read comments above each method. Be careful to use only data structures that are allowed for each problem. For example, for several methods in class
 MyArray, you are NOT allowed to use an extra array or ArrayList etc. Do not modify classes Pixel, Picture and MyArray. Do NOT modify the tests or the starter code except where the comments explicitly tell you to add your own code. Do not change the structure of the project.
