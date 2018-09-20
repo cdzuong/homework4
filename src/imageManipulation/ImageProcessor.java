@@ -5,8 +5,13 @@ package imageManipulation;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
+import java.awt.*;
+import java.awt.image.*;
+import java.awt.geom.*;
+
 public class ImageProcessor {
     private Picture myImage; // reference to the Picture object
+
 
     /**
      * Constructor: creates a Picture from the given image file
@@ -65,18 +70,16 @@ public class ImageProcessor {
         // FILL IN CODE
 
 
-
-
         for (int y = 0; y < myImage.getHeight(); y++) {
 
             //     myImage.getPixel(i, j); set as variable
             // swap pixels with setPixel method
 
 
-            for (int x = 0; x < myImage.getWidth()/2; x++) {
+            for (int x = 0; x < myImage.getWidth() / 2; x++) {
 
                 Pixel temp = myImage.getPixel(myImage.getWidth() - 1 - x, y);
-                myImage.setPixel(myImage.getWidth() - 1 - x, y, myImage.getPixel(x,y));
+                myImage.setPixel(myImage.getWidth() - 1 - x, y, myImage.getPixel(x, y));
                 myImage.setPixel(x, y, temp);
 
             }
@@ -134,12 +137,28 @@ public class ImageProcessor {
 
 
     public void blur() {
-        // FILL IN CODE
-// write a helper function (a new method), returns array of pixels of itself plus its neighbors
-        // i, j, (avg r g b of that array grid)
 
-        // ignore edges because out of bound
 
+        int[][] matrix = {{-1, -1, -1},
+                {-1, 9, -1},
+                {-1, -1, -1}};
+
+
+        int redTot = 0;
+        int greenTot = 0;
+        int blueTot = 0;
+
+        for (int y = 0; y < myImage.getWidth(); y++) {
+            for (int x = 0; x < myImage.getHeight(); x++) {
+                redTot += myImage.getPixel(x, y).getRed();
+                greenTot += myImage.getPixel(x, y).getGreen();
+                blueTot += myImage.getPixel(x, y).getBlue();
+
+                Pixel pixel = new Pixel(redTot, greenTot, blueTot);
+                myImage.setPixel(x, y, pixel);
+            }
+
+        }
 
     }
 
