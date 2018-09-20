@@ -64,22 +64,24 @@ public class ImageProcessor {
     public void flipHorizontally() {
         // FILL IN CODE
 
-        Pixel dot;
-        int diff;
-        int newDot;
-        Pixel temp;
-        for (int i = 0; i < myImage.getHeight(); i++) {
-            for (int j = 0; j < myImage.getWidth(); j++) {
-                //     myImage.getPixel(i, j); set as variable
-                // swap pixels with setPixel method
-                diff = (myImage.getWidth() / 2) - j;
-                newDot = (myImage.getWidth() / 2) + diff;
-                dot = myImage.getPixel(i, j);
-                temp = myImage.getPixel(i, newDot);
-                myImage.setPixel(i, newDot, dot);
-                myImage.setPixel(i, j, temp);
+
+
+
+        for (int y = 0; y < myImage.getHeight(); y++) {
+
+            //     myImage.getPixel(i, j); set as variable
+            // swap pixels with setPixel method
+
+
+            for (int x = 0; x < myImage.getWidth()/2; x++) {
+
+                Pixel temp = myImage.getPixel(myImage.getWidth() - 1 - x, y);
+                myImage.setPixel(myImage.getWidth() - 1 - x, y, myImage.getPixel(x,y));
+                myImage.setPixel(x, y, temp);
 
             }
+
+
         }
 
 
@@ -137,9 +139,6 @@ public class ImageProcessor {
         // i, j, (avg r g b of that array grid)
 
         // ignore edges because out of bound
-
-
-
 
 
     }
